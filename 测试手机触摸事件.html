@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <!--
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="font/iconfont.css">
+    <script src="js/index.js"></script>
+    -->
+    <style>
+    html{
+        font-size: 60px;
+    }
+        #app{
+            width: 500px;
+            height: 500px;
+            background: coral;
+            font-size: 0.5rem;
+        }
+    </style>
+    <title>凯-Dome</title>
+</head>
+<body>
+
+<div id="app">
+
+</div>
+
+<script type="text/javascript">
+
+/*
+ * 触摸事件
+ *
+ */
+var app = document.getElementById("app");
+app.addEventListener("touchstart",function(e){
+    e.preventDefault();
+    app.innerHTML = "targetTouchs" + e.targetTouches.length + "<br>" + "touches" + e.touches.length + "<br>" + "changedTouches" + e.changedTouches;
+})
+
+
+</script>
+
+
+
+</body>
+</html>
